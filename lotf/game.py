@@ -376,8 +376,18 @@ obj9 =input('Do you ask\na.) Where did the kids go?\nb.) How many kids where her
 while obj9 not in ('a', 'b'):
     obj9 =input('Invalid. Please Enter Again:').lower()
 if obj9 == 'a':
-    print('Piggy:')
+    print('Piggy: As soon as you left, the kids ran off, so I could not count how many there were.')
 if obj9 == 'b':
-    print('Piggy:')
-
-
+    print('Piggy: The kids ran off, so I could not count how many there were.')
+time.sleep(1)
+print('Piggy: However, I did get a few. There was Robert, and Maurice, and Henry, and Simon.')
+time.sleep(1)
+print('** Objective Nine Completed **')
+input('Press enter to continue...')
+print("==========================")
+print('SamnEric emerge from the jungle carrying logs')
+print('Suddenly an aircraft comes crashing down on you')
+time.sleep(1)
+print('The plane starts a fire, and everyone is left to starve to death on the island')
+time.sleep(1)
+print('No one is ever rescued, there are no survivors')
