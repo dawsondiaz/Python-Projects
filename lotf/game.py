@@ -2,7 +2,7 @@
 # A Lord of the Flies Text Adventure Game    #
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim, Raymond Sweeney #
-# Version 1.3, Written in Pythoon 3.3.4      #
+# Version 1.3, Written in Python 3.3.4       #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -14,6 +14,8 @@ from random import randrange                 #
 from engine import beach                     #
 from engine import clear                     #
 from engine import conch                     #
+from engine import sun                       #
+from engine import island                    #
                                              #
 ##############################################
 
@@ -78,7 +80,7 @@ if obj1 == 'a':
             name = name.title()
             break
         else:
-            print("Too Long! Make it shorter, if you have a name like 'Mary Joe', please seperate it by using a '-'")
+            print("Invalid. Either make it shorter, or actually input something.\nIf you have a name like 'Mary Joe', please seperate it by using a '-'")
     time.sleep(1)
     print('Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
     time.sleep(1)
@@ -299,7 +301,7 @@ elif obj7 == 'c':
         time.sleep(seconds)
     input('Press enter to continue...')
     print("==========================")
-    quit
+    sys.exit()
     #LOL#
 elif obj7 == 'd':
     print('You start talking about further exploration of the island, but piggy stops you.')
@@ -324,5 +326,58 @@ print('** Objective Eight Completed **')
 input('Press enter to continue...')
 print("==========================")
 time.sleep(1)
+print('You explore the island.')
+time.sleep(1)
+print('THE ISLAND')
+island.island()
+time.sleep(2)
+print('THE JUNGLE')
+island.jungle()
+time.sleep(2)
+print('THE CASTLE ROCK')
+island.castlerock()
+time.sleep(2)
+print('THE MOUNTAIN')
+island.mountain()
+time.sleep(2)
+print('\n')
+print('You have determined the three main parts of the island\nThe Jungle, The Castle Rock, and the Mountain.')
+print('** Objective Nine Completed **')
+input('Press enter to continue...')
+print("==========================")
+print('You return back to Piggy at the camp.\nHe is startled by your arrival, what do you do?')
+time.sleep(1)
+obj8 =input('a.) Ask Piggy what happened.\nb.) Order others to gather firewood, and start a fire.\nc.) Attempt to eliminate Jack, your competition.\n').lower()
+while obj8 not in ('a','b','c'):
+    obj8 =input('Invalid. Please Enter Again:').lower()
+if obj8 =='a':
+    print('You proceed to ask piggy.')
+elif obj8 == 'b':
+    print('You order others to get wood, however they are not as many people here as there was before.')
+    time.sleep(1)
+    print('You proceed to ask piggy.')
+elif obj8 == 'c':
+    print('You charge towards Jack and begin to punch him. \nYou take the knife from its holder and attempt to stab him.')
+    time.sleep(2)
+    print('Unfortunatley, his chior steps in, and they MURDER you.')
+    time.sleep(1)
+    text = 'GAME OVER\n'
+    for c in text:
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        seconds = "0." + str(randrange(1, 2, 1))
+        seconds = float(seconds)
+        time.sleep(seconds)
+    input('Press enter to continue...')
+    print("==========================")
+    sys.exit()
+time.sleep(2)
+obj9 =input('Do you ask\na.) Where did the kids go?\nb.) How many kids where here?\n')
+while obj9 not in ('a', 'b'):
+    obj9 =input('Invalid. Please Enter Again:').lower()
+if obj9 == 'a':
+    print('Piggy:')
+if obj9 == 'b':
+    print('Piggy:')
 
 
