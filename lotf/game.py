@@ -2,7 +2,7 @@
 # A Lord of the Flies Text Adventure Game    #
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim, Raymond Sweeney #
-# Version 1.0, Written in Pythoon 3.3.4      #
+# Version 1.3, Written in Pythoon 3.3.4      #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -143,7 +143,7 @@ elif obj1 == 'b':
             name = name.title()
             break
         else:
-            print("Too Long! Make it shorter, if you have a name like 'Mary Joe', please seperate it by using a '-'")
+            print("Ahhhj Make it shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
     time.sleep(1)
     print('Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
     time.sleep(1)
@@ -211,7 +211,7 @@ elif obj4 == 'b':
 print('** Objective Five Completed **')
 input('Press enter to continue...')
 print("==========================")
-time.sleep(1)
+time.sleep(2)
 print('Within the next few moments, boys begin to emerge all around you.\nThe nearest to you appear to be twins, what do you do?')
 time.sleep(1)
 obj5 =input('Do you\na.) Ask for their names\nb.) Begin to gather all of the boys\nc.) Cower into the forest.\n').lower()
@@ -229,17 +229,21 @@ elif obj5 == 'b':
     print('You three hear the fait noise of that seems like marching.')
 elif obj5 == 'c':
     print('You cower into the forest.')
+    time.sleep(1)
     print('You get deep into the forest, however you decide to return outside because you heard a faint noise of what seems to be a large group of marching people')
+    time.sleep(1)
     print('The two twins approach you and ask for your name, you tell them your name is {}, and then they respond by telling you their names are Sam and Eric.'.format(name))
+    time.sleep(1)
 print('** Objective Six Completed **')
 input('Press enter to continue...')
 print("==========================")
 time.sleep(1)
 print('All of a sudden, you see a large group of boys marching in your direction.\nWhen they arrive, a person in the group faints.')
-time.sleep(1)
-print('The leader of the group (distinusged by an ornament on his cloak) asks "Who is the man with the trumpet"')
 time.sleep(2)
-print('You hesitate, but you respond with "I"\n You follow by asking him a question')
+print('The leader of the group (distinusged by an ornament on his cloak) asks\n"Who is the man with the trumpet"')
+time.sleep(2)
+print('You hesitate, but you respond with "I"\nYou follow by asking him a question')
+time.sleep(2)
 obj6 =input('Do you\na.) Ask for his name\nb.) Ask who fainted, and if they are alright\n').lower()
 while obj6 not in ('a','b'):
     obj6 =input("Invalid. Please Enter Again: ").lower()
@@ -249,4 +253,76 @@ elif obj6 == 'b':
     print('Oh yes, Simon is alright. That happens to him quite often\nMy name is Jack Marridew, and I am lead boy of the chior')
 time.sleep(1)
 print('Jack: I suppose if we have all of these kids on this island, we need a leader')
+time.sleep(1)
+print('You volunteer to be chief')
+time.sleep(1)
+print('Jack: Who thinks I should be chief?')
+time.sleep(3)
+print('Only three boys raise their hands.')
+time.sleep(1)
+print('Jack: Who thinks {} should be chief?'.format(name))
+time.sleep(3)
+print('The rest of the boys raise their hands')
+time.sleep(1)
+print('Jack: All right then, it is settled. {} will be cheif.'.format(name))
+print('** Objective Seven Completed **')
+input('Press enter to continue...')
+print("==========================")
+time.sleep(1)
+
+obj7 =input('What is your first order as chief?\na.) Call a meeting\nb.) Assign Positions\nc.) Eliminate your rival Jack\nd.) Explore the island\n').lower()
+while obj7 not in ('a','b','c','d'):
+    obj7 =input('Invalid. Please Enter Again:').lower()
+if obj7 =='a':
+    print('You call a meeting by blowing into the conch one more time')
+    print('You begin by saying how important rescue is, and that a fire should be kept on at all times.')
+    time.sleep(1)
+    print('You give rules, the most important being whoever has the conch can talk, whoever does not may not speak')
+    time.sleep(1)
+    print('You also mention that shelter must be built, and that food must be aqquired.')
+    time.sleep(1)
+    print('You begin to assign roles,')
+elif obj7 == 'b':
+    print('You begin to assign roles,')
+elif obj7 == 'c':
+    #LOL#
+    print('You charge towards Jack and begin to punch him. \nYou take the knife from its holder and attempt to stab him.')
+    time.sleep(2)
+    print('Unfortunatley, his chior steps in, and they MURDER you.')
+    time.sleep(1)
+    text = 'GAME OVER\n'
+    for c in text:
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        seconds = "0." + str(randrange(1, 2, 1))
+        seconds = float(seconds)
+        time.sleep(seconds)
+    input('Press enter to continue...')
+    print("==========================")
+    quit
+    #LOL#
+elif obj7 == 'd':
+    print('You start talking about further exploration of the island, but piggy stops you.')
+    time.sleep(1)
+    print('Piggy: If we are going to explore, we must atlest give people jobs.')
+    time.sleep(1)
+    print('Piggy: We need ways to get food, water, shelter, and fire!')
+    time.sleep(1)
+    print('You begin to assign roles,')
+time.sleep(2)
+print('{}: Jack, you and your chior will be the hunters.'.format(name))
+time.sleep(2)
+print('{}: Piggy, you can collect names.'.format(name))
+time.sleep(2)
+print('{}: SamnEric, you can keep a fire going once we obtain one.'.format(name))
+time.sleep(2)
+print('{}: Now, we can explore the island.\n{}: How about Jack, and Simon come with me to explore'.format(name,name))
+print('You go out with Jack and Simon to explore the island')
+time.sleep(1)
+sun.sun()
+print('** Objective Eight Completed **')
+input('Press enter to continue...')
+print("==========================")
+time.sleep(1)
+
 
