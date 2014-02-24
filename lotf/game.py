@@ -2,7 +2,7 @@
 # A Lord of the Flies Text Adventure Game    #
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim, Raymond Sweeney #
-# Version 1.3, Written in Python 3.3.4       #
+# Version 1.5, Written in Python 3.3.4       #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -80,7 +80,9 @@ if obj1 == 'a':
             name = name.title()
             break
         else:
-            print("Invalid. Either make it shorter, or actually input something.\nIf you have a name like 'Mary Joe', please seperate it by using a '-'")
+            print("Ahhhj Make it shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
+    if name == ('kelly'):
+        print('Heyy Bffl.')
     time.sleep(1)
     print('Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
     time.sleep(1)
@@ -146,6 +148,8 @@ elif obj1 == 'b':
             break
         else:
             print("Ahhhj Make it shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
+    if name == ('kelly'):
+        print('Hey Bffl.')
     time.sleep(1)
     print('Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
     time.sleep(1)
