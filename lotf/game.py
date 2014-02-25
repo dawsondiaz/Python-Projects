@@ -2,7 +2,8 @@
 # A Lord of the Flies Text Adventure Game    #
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim                  #
-# Version 1.5, Written in Python 2.7.6       #
+# Colorama: By Jonathan Hartley              #
+# Version 1.6, Written in Python 2.7.6       #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -15,13 +16,14 @@ from engine import beach                     #
 from engine import clear                     #
 from engine import conch                     #
 from engine import sun                       #
+from engine import title                     #
 from engine import island                    #
 from colorama import init                    #
 from colorama import Fore, Back, Style       #
 init()                                       #
 ##############################################
-print (Fore.GREEN + '-Lord of the Flies Text Adventure-')
-text = "LONG INTRO"
+title.title()
+text = "Your plane has crashed on a remote island.\nYou have been trying to find your way out of the jungle for the past hour.\nYou have not seen any other human being or adult since the plane crash.\nYou have no food or water."
 
 for c in text:
     sys.stdout.write(c)
@@ -67,7 +69,7 @@ if obj1 == 'a':
     # PRESS KEY #
     raw_input("Press enter to continue...")
     print("==========================")
-    text = "You hear a ruffle in the bushes behind you and you turn around.\nYou are approached by a fat kid.\nHe identifies himself as Piggy.\n"
+    text = "You hear a ruffle in the bushes behind you and you turn around\nYou are approached by a fat kid\nHe identifies himself as Piggy.\n"
 
 # Script for Slow Text
     for c in text:
@@ -226,11 +228,11 @@ obj5 =raw_input('Do you\na.) Ask for their names\nb.) Begin to gather all of the
 while obj5 not in ('a','b','c'):
     obj5 =raw_input("Invalid. Please Enter Again: ").lower()
 if obj5 == 'a':
-    print('You ask for their names.')
+    print('You ask for their names')
     time.sleep(1)
-    print('Twins: My name is Sam, and my name is Eric.')
+    print('Twins: My name is Sam, and my name is Eric')
 elif obj5 == 'b':
-    print('You attempt to gather all of the boys, however, there are too many.')
+    print('You attempt to gather all of the boys, however, there are too many')
     time.sleep(1)
     print('The two twins approach you and ask for your name, you tell them your name is {}, and then they respond by telling you their names are Sam and Eric.'.format(name))
     time.sleep(1)
@@ -238,7 +240,7 @@ elif obj5 == 'b':
 elif obj5 == 'c':
     print('You cower into the forest.')
     time.sleep(1)
-    print('You get deep into the forest, however you decide to return outside because you heard a faint noise of what seems to be a large group of marching people.')
+    print('You get deep into the forest, however you decide to return outside because you heard a faint noise of what seems to be a large group of marching people')
     time.sleep(1)
     print('The two twins approach you and ask for your name, you tell them your name is {}, and then they respond by telling you their names are Sam and Eric.'.format(name))
     time.sleep(1)
@@ -252,17 +254,17 @@ print('The leader of the group (distinusged by an ornament on his cloak) asks\n"
 time.sleep(2)
 print('You hesitate, but you respond with "I"\nYou follow by asking him a question')
 time.sleep(2)
-obj6 =raw_input('Do you\na.) Ask for his name\nb.) Ask who fainted, and if they are alright\n.').lower()
+obj6 =raw_input('Do you\na.) Ask for his name\nb.) Ask who fainted, and if they are alright\n').lower()
 while obj6 not in ('a','b'):
     obj6 =raw_input("Invalid. Please Enter Again: ").lower()
 if obj6 == 'a':
     print('My name is Jack, Jack Marridew to be exact.')
 elif obj6 == 'b':
-    print('Oh yes, Simon is alright. That happens to him quite often\nMy name is Jack Marridew, and I am lead boy of the chior.')
+    print('Oh yes, Simon is alright. That happens to him quite often\nMy name is Jack Marridew, and I am lead boy of the chior')
 time.sleep(1)
-print('Jack: I suppose if we have all of these kids on this island, we need a leader.')
+print('Jack: I suppose if we have all of these kids on this island, we need a leader')
 time.sleep(1)
-print('You volunteer to be chief.')
+print('You volunteer to be chief')
 time.sleep(1)
 print('Jack: Who thinks I should be chief?')
 time.sleep(3)
@@ -270,7 +272,7 @@ print('Only three boys raise their hands.')
 time.sleep(1)
 print('Jack: Who thinks {} should be chief?'.format(name))
 time.sleep(3)
-print('The rest of the boys raise their hands.')
+print('The rest of the boys raise their hands')
 time.sleep(1)
 print('Jack: All right then, it is settled. {} will be cheif.'.format(name))
 print('** Objective Seven Completed **')
@@ -282,12 +284,12 @@ obj7 =raw_input('What is your first order as chief?\na.) Call a meeting\nb.) Ass
 while obj7 not in ('a','b','c','d'):
     obj7 =raw_input('Invalid. Please Enter Again:').lower()
 if obj7 =='a':
-    print('You call a meeting by blowing into the conch one more time.')
+    print('You call a meeting by blowing into the conch one more time')
     print('You begin by saying how important rescue is, and that a fire should be kept on at all times.')
     time.sleep(1)
-    print('You give rules, the most important being whoever has the conch can talk, whoever does not have the conch in their hand may not speak.')
+    print('You give rules, the most important being whoever has the conch can talk, whoever does not may not speak')
     time.sleep(1)
-    print('You also mention that shelters must be built, and that food must be aqquired.')
+    print('You also mention that shelter must be built, and that food must be aqquired.')
     time.sleep(1)
     print('You begin to assign roles,')
 elif obj7 == 'b':
@@ -316,8 +318,6 @@ elif obj7 == 'd':
     time.sleep(1)
     print('Piggy: We need ways to get food, water, shelter, and fire!')
     time.sleep(1)
-    print('You have getting rescued as your top priority.')
-    time.sleep(1)
     print('You begin to assign roles,')
 time.sleep(2)
 print('{}: Jack, you and your chior will be the hunters.'.format(name))
@@ -327,7 +327,7 @@ time.sleep(2)
 print('{}: SamnEric, you can keep a fire going once we obtain one.'.format(name))
 time.sleep(2)
 print('{}: Now, we can explore the island.\n{}: How about Jack, and Simon come with me to explore'.format(name,name))
-print('You go out with Jack and Simon to explore the island.')
+print('You go out with Jack and Simon to explore the island')
 time.sleep(1)
 sun.sun()
 print('** Objective Eight Completed **')
@@ -338,16 +338,16 @@ print('You explore the island.')
 time.sleep(1)
 print('THE ISLAND')
 island.island()
-time.sleep(3)
+time.sleep(2)
 print('THE JUNGLE')
 island.jungle()
-time.sleep(3)
+time.sleep(2)
 print('THE CASTLE ROCK')
 island.castlerock()
-time.sleep(3)
+time.sleep(2)
 print('THE MOUNTAIN')
 island.mountain()
-time.sleep(3)
+time.sleep(2)
 print('\n')
 print('You have determined the three main parts of the island\nThe Jungle, The Castle Rock, and the Mountain.')
 print('** Objective Nine Completed **')
@@ -393,9 +393,9 @@ time.sleep(1)
 print('** Objective Nine Completed **')
 raw_input('Press enter to continue...')
 print("==========================")
-print('SamnEric emerge from the jungle carrying logs.')
-print('Suddenly an aircraft comes crashing down on you.')
+print('SamnEric emerge from the jungle carrying logs')
+print('Suddenly an aircraft comes crashing down on you')
 time.sleep(1)
-print('The plane starts a fire, and everyone is left to starve to death on the island.')
+print('The plane starts a fire, and everyone is left to starve to death on the island')
 time.sleep(1)
-print('No one is ever rescued, there are no survivors.')
+print('No one is ever rescued, there are no survivors')
