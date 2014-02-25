@@ -19,7 +19,7 @@ from engine import island                    #
                                              #
 ##############################################
 
-text = "** Execute Long Intro **"
+text = "** Lord of the Flies Text Adventure **"
 
 for c in text:
     sys.stdout.write(c)
@@ -56,7 +56,7 @@ if obj1 == 'a':
     time.sleep(1)
     
 # Second Quest    
-    print('You emerge out of the jungle and walk along the shoreline of a sunny beach')
+    print('You emerge out of the jungle and walk along the shoreline of a sunny beach.')
     # PRINT BEACH #
     beach.beach()
     time.sleep(1)
@@ -100,9 +100,9 @@ if obj1 == 'a':
     while obj2 not in ('a', 'b','c'):
         obj2 = input("Invallid. Please Enter again: ").lower()
     if obj2 == 'a':
-        print('Piggy: Because I have asthma')
+        print('Piggy: Because I have asthma.')
     elif obj2 == 'b':
-        print('Piggy: I am afriad I have not seen any other people')
+        print('Piggy: I am afriad I have not seen any other people.')
     elif obj2 == 'c':
         print('Piggy: Because of my asthma, and my auntie does not allow me to.')
     print('** Objective Three Completed **')
@@ -116,15 +116,15 @@ if obj1 == 'a':
     while obj3 not in ('a', 'b'):
         obj3 =input("Invallid. Please Enter Again: ").lower()
     if obj3 == 'a':
-        print('You pick up the shell')
+        print('You pick up the shell.')
     elif obj3 == 'b':
         print('You swim for awhile and then your attention is grabbed by Piggys admiration for the shell.')
         time.sleep(1)
-        print('You pick up the shell')
+        print('You pick up the shell.')
 # Path 2 #
 
 elif obj1 == 'b':
-    print('You manage to find a path out of the jungle and discover a beach,')
+    print('You manage to find a path out of the jungle and discover a beach.')
     beach.beach()
     time.sleep(1)
     print('** Objective One Completed **')
@@ -167,9 +167,9 @@ elif obj1 == 'b':
     while obj2 not in ('a', 'b','c'):
         obj2 = input("Invallid. Please Enter again: ").lower()
     if obj2 == 'a':
-        print('Piggy: Because I have asthma')
+        print('Piggy: Because I have asthma.')
     elif obj2 == 'b':
-        print('Piggy: I am afriad I have not seen any other people')
+        print('Piggy: I am afriad I have not seen any other people.')
     elif obj2 == 'c':
         print('Piggy: Because of my asthma, and my auntie does not allow me to.')
     print('** Objective Three Completed **')
@@ -183,11 +183,11 @@ elif obj1 == 'b':
     while obj3 not in ('a', 'b'):
         obj3 =input("Invallid. Please Enter Again: ").lower()
     if obj3 == 'a':
-        print('You pick up the shell')
+        print('You pick up the shell.')
     elif obj3 == 'b':
         print('You swim for awhile and then your attention is grabbed by Piggys admiration for the shell.')
         time.sleep(1)
-        print('You pick up the shell')
+        print('You pick up the shell.')
 # PRINT SHELL #
 conch.conch()
 # PRINT SHELL #
@@ -209,9 +209,9 @@ while obj4 not in ('a','b'):
 if obj4 == 'a':
     print('You blow through the bottom of the shell, and a loud noise comes out of it.')
 elif obj4 == 'b':
-    print('You ask piggy to blow the conch')
+    print('You ask piggy to blow the conch.')
     time.sleep(1)
-    print("Piggy: I can't remember?, You're going to have to blow it")
+    print("Piggy: I can't remember?, You're going to have to blow it.")
     time.sleep(1)
     print("You blow through the bottom of the shell, and a loud noise comes out of it.")
 print('** Objective Five Completed **')
