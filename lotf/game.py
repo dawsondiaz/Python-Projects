@@ -131,7 +131,7 @@ elif obj1 == 'b':
     input('Press enter to continue...')
     print('==========================')
     time.sleep(1)
-    text = "You hear a ruffle in the bushes behind you and your turn around\nYou are approached by a fat kid\nHe identifies himself as Piggy.\n"
+    text = "You hear a ruffle in the bushes behind and you turn around\nYou are approached by a fat kid\nHe identifies himself as Piggy.\n"
 
 # Script for Slow Text
     for c in text:
