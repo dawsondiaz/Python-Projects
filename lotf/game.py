@@ -285,9 +285,9 @@ if obj7 =='a':
     print('You call a meeting by blowing into the conch one more time.')
     print('You begin by saying how important rescue is, and that a fire should be kept on at all times.')
     time.sleep(1)
-    print('You give rules, the most important being whoever has the conch can talk, whoever does not may not speak.')
+    print('You give rules, the most important being whoever has the conch can talk, whoever does not have the conch in their hand may not speak.')
     time.sleep(1)
-    print('You also mention that shelter must be built, and that food must be aqquired.')
+    print('You also mention that shelters must be built, and that food must be aqquired.')
     time.sleep(1)
     print('You begin to assign roles,')
 elif obj7 == 'b':
