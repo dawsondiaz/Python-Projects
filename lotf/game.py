@@ -2,7 +2,7 @@
 # A Lord of the Flies Text Adventure Game    #
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim                  #
-# Version 1.5, Written in Python 3.3.4       #
+# Version 1.5, Written in Python 2.7.6       #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -16,10 +16,12 @@ from engine import clear                     #
 from engine import conch                     #
 from engine import sun                       #
 from engine import island                    #
-                                             #
+from colorama import init                    #
+from colorama import Fore, Back, Style       #
+init()                                       #
 ##############################################
-
-text = "** Lord of the Flies Text Adventure **"
+print (Fore.GREEN + '-Lord of the Flies Text Adventure-')
+text = "LONG INTRO"
 
 for c in text:
     sys.stdout.write(c)
@@ -35,10 +37,10 @@ time.sleep(1)
 
 
 # First Quest
-obj1 =input('\nDo you \na.) Rest on the ground \nb.) Find a way out of the jungle\n').lower()
+obj1 =raw_input('\nDo you \na.) Rest on the ground \nb.) Find a way out of the jungle\n').lower()
 
 while obj1 not in ('a', 'b'):
-    obj1 = input("Invallid. Please Enter again: ").lower()
+    obj1 = raw_input("Invallid. Please Enter again: ").lower()
 
 # Path 1 #
 if obj1 == 'a':
@@ -63,7 +65,7 @@ if obj1 == 'a':
     print('** Objective One Completed **')
     time.sleep(2)
     # PRESS KEY #
-    input("Press enter to continue...")
+    raw_input("Press enter to continue...")
     print("==========================")
     text = "You hear a ruffle in the bushes behind you and you turn around\nYou are approached by a fat kid\nHe identifies himself as Piggy.\n"
 
@@ -75,7 +77,7 @@ if obj1 == 'a':
         seconds = float(seconds)
         time.sleep(seconds)
     while True:
-        name =input('Piggy: What is your name?\n').strip()
+        name =raw_input('Piggy: What is your name?\n').strip()
         if len(name.split()) == 1:
             name = name.title()
             break
@@ -91,14 +93,14 @@ if obj1 == 'a':
     print('** Objective Two Completed **')
     time.sleep(2)
     # PRINT KEY #
-    input('Press enter to continue...')
+    raw_input('Press enter to continue...')
     print("==========================")
     ## NEXT OBJECTIVE #
     print('You and Piggy walk over to the beack and begin to swim.\nYou notice his heavy breathing, what do you ask him?')
     time.sleep(1)
-    obj2 =input("a.) Why are you breathing hard?\nb.) Have you seen anyone else?\nc.) Why don't you swim\n").lower()
+    obj2 =raw_input("a.) Why are you breathing hard?\nb.) Have you seen anyone else?\nc.) Why don't you swim\n").lower()
     while obj2 not in ('a', 'b','c'):
-        obj2 = input("Invallid. Please Enter again: ").lower()
+        obj2 = raw_input("Invallid. Please Enter again: ").lower()
     if obj2 == 'a':
         print('Piggy: Because I have asthma.')
     elif obj2 == 'b':
@@ -107,14 +109,14 @@ if obj1 == 'a':
         print('Piggy: Because of my asthma, and my auntie does not allow me to.')
     print('** Objective Three Completed **')
     time.sleep(2)
-    input('Press enter to continue...')
+    raw_input('Press enter to continue...')
     print("==========================")
     # NEXT OBJECTIVE #
     print('You walk over to a pond with that is being emptied by a large waterfall.\nYou see a shell. What do you do with it?')
     time.sleep(1)
-    obj3 =input('a.) Pick it up\nb.) Continue to swim\n').lower()
+    obj3 =raw_input('a.) Pick it up\nb.) Continue to swim\n').lower()
     while obj3 not in ('a', 'b'):
-        obj3 =input("Invallid. Please Enter Again: ").lower()
+        obj3 =raw_input("Invallid. Please Enter Again: ").lower()
     if obj3 == 'a':
         print('You pick up the shell.')
     elif obj3 == 'b':
@@ -128,7 +130,7 @@ elif obj1 == 'b':
     beach.beach()
     time.sleep(1)
     print('** Objective One Completed **')
-    input('Press enter to continue...')
+    raw_input('Press enter to continue...')
     print('==========================')
     time.sleep(1)
     text = "You hear a ruffle in the bushes behind and you turn around\nYou are approached by a fat kid\nHe identifies himself as Piggy.\n"
@@ -142,7 +144,7 @@ elif obj1 == 'b':
         time.sleep(seconds)
 
     while True:
-        name =input('Piggy: What is your name?\n').strip()
+        name =raw_input('Piggy: What is your name?\n').strip()
         if len(name.split()) == 1:
             name = name.title()
             break
@@ -158,14 +160,14 @@ elif obj1 == 'b':
     print('** Objective Two Completed **')
     time.sleep(2)
     # PRINT KEY #
-    input('Press enter to continue...')
+    raw_input('Press enter to continue...')
     print("==========================")
     ## NEXT OBJECTIVE #
     print('You and Piggy walk over to the beack and begin to swim.\nYou notice his heavy breathing, what do you ask him?')
     time.sleep(1)
-    obj2 =input("a.) Why are you breathing hard?\nb.) Have you seen anyone else?\nc.) Why don't you swim\n").lower()
+    obj2 =raw_input("a.) Why are you breathing hard?\nb.) Have you seen anyone else?\nc.) Why don't you swim\n").lower()
     while obj2 not in ('a', 'b','c'):
-        obj2 = input("Invallid. Please Enter again: ").lower()
+        obj2 = raw_input("Invallid. Please Enter again: ").lower()
     if obj2 == 'a':
         print('Piggy: Because I have asthma.')
     elif obj2 == 'b':
@@ -174,14 +176,14 @@ elif obj1 == 'b':
         print('Piggy: Because of my asthma, and my auntie does not allow me to.')
     print('** Objective Three Completed **')
     time.sleep(2)
-    input('Press enter to continue...')
+    raw_input('Press enter to continue...')
     print("==========================")
     # NEXT OBJECTIVE #
     print('You walk over to a pond with that is being emptied by a large waterfall.\nYou see a shell. What do you do with it?')
     time.sleep(1)
-    obj3 =input('a.) Pick it up\nb.) Continue to swim\n').lower()
+    obj3 =raw_input('a.) Pick it up\nb.) Continue to swim\n').lower()
     while obj3 not in ('a', 'b'):
-        obj3 =input("Invallid. Please Enter Again: ").lower()
+        obj3 =raw_input("Invallid. Please Enter Again: ").lower()
     if obj3 == 'a':
         print('You pick up the shell.')
     elif obj3 == 'b':
@@ -192,7 +194,7 @@ elif obj1 == 'b':
 conch.conch()
 # PRINT SHELL #
 print('** Objective Four Completed **')
-input('Press enter to continue...')
+raw_input('Press enter to continue...')
 print("==========================")   
 # NEXT OBJECTIVE #
 text = "Piggy: Ooh! It's a conch, I remember when I had one.\nI think if you blow through the bottom sound comes out of it.\n"
@@ -203,9 +205,9 @@ for c in text:
     
     seconds = float(seconds)
     time.sleep(seconds)
-obj4= input('Do you\na.) Blow through the bottom of the shell\nb.) Ask piggy to blow the shell\n').lower()
+obj4= raw_input('Do you\na.) Blow through the bottom of the shell\nb.) Ask piggy to blow the shell\n').lower()
 while obj4 not in ('a','b'):
-    obj4 =input("Invalid. Please Enter Again: ").lower()
+    obj4 =raw_input("Invalid. Please Enter Again: ").lower()
 if obj4 == 'a':
     print('You blow through the bottom of the shell, and a loud noise comes out of it.')
 elif obj4 == 'b':
@@ -215,14 +217,14 @@ elif obj4 == 'b':
     time.sleep(1)
     print("You blow through the bottom of the shell, and a loud noise comes out of it.")
 print('** Objective Five Completed **')
-input('Press enter to continue...')
+raw_input('Press enter to continue...')
 print("==========================")
 time.sleep(2)
 print('Within the next few moments, boys begin to emerge all around you.\nThe nearest to you appear to be twins, what do you do?')
 time.sleep(1)
-obj5 =input('Do you\na.) Ask for their names\nb.) Begin to gather all of the boys\nc.) Cower into the forest.\n').lower()
+obj5 =raw_input('Do you\na.) Ask for their names\nb.) Begin to gather all of the boys\nc.) Cower into the forest.\n').lower()
 while obj5 not in ('a','b','c'):
-    obj5 =input("Invalid. Please Enter Again: ").lower()
+    obj5 =raw_input("Invalid. Please Enter Again: ").lower()
 if obj5 == 'a':
     print('You ask for their names')
     time.sleep(1)
@@ -241,7 +243,7 @@ elif obj5 == 'c':
     print('The two twins approach you and ask for your name, you tell them your name is {}, and then they respond by telling you their names are Sam and Eric.'.format(name))
     time.sleep(1)
 print('** Objective Six Completed **')
-input('Press enter to continue...')
+raw_input('Press enter to continue...')
 print("==========================")
 time.sleep(1)
 print('All of a sudden, you see a large group of boys marching in your direction.\nWhen they arrive, a person in the group faints.')
@@ -250,9 +252,9 @@ print('The leader of the group (distinusged by an ornament on his cloak) asks\n"
 time.sleep(2)
 print('You hesitate, but you respond with "I"\nYou follow by asking him a question')
 time.sleep(2)
-obj6 =input('Do you\na.) Ask for his name\nb.) Ask who fainted, and if they are alright\n').lower()
+obj6 =raw_input('Do you\na.) Ask for his name\nb.) Ask who fainted, and if they are alright\n').lower()
 while obj6 not in ('a','b'):
-    obj6 =input("Invalid. Please Enter Again: ").lower()
+    obj6 =raw_input("Invalid. Please Enter Again: ").lower()
 if obj6 == 'a':
     print('My name is Jack, Jack Marridew to be exact.')
 elif obj6 == 'b':
@@ -272,13 +274,13 @@ print('The rest of the boys raise their hands')
 time.sleep(1)
 print('Jack: All right then, it is settled. {} will be cheif.'.format(name))
 print('** Objective Seven Completed **')
-input('Press enter to continue...')
+raw_input('Press enter to continue...')
 print("==========================")
 time.sleep(1)
 
-obj7 =input('What is your first order as chief?\na.) Call a meeting\nb.) Assign Positions\nc.) Eliminate your rival Jack\nd.) Explore the island\n').lower()
+obj7 =raw_input('What is your first order as chief?\na.) Call a meeting\nb.) Assign Positions\nc.) Eliminate your rival Jack\nd.) Explore the island\n').lower()
 while obj7 not in ('a','b','c','d'):
-    obj7 =input('Invalid. Please Enter Again:').lower()
+    obj7 =raw_input('Invalid. Please Enter Again:').lower()
 if obj7 =='a':
     print('You call a meeting by blowing into the conch one more time')
     print('You begin by saying how important rescue is, and that a fire should be kept on at all times.')
@@ -303,7 +305,7 @@ elif obj7 == 'c':
         seconds = "0." + str(randrange(1, 2, 1))
         seconds = float(seconds)
         time.sleep(seconds)
-    input('Press enter to continue...')
+    raw_input('Press enter to continue...')
     print("==========================")
     sys.exit()
     #LOL#
@@ -327,7 +329,7 @@ print('You go out with Jack and Simon to explore the island')
 time.sleep(1)
 sun.sun()
 print('** Objective Eight Completed **')
-input('Press enter to continue...')
+raw_input('Press enter to continue...')
 print("==========================")
 time.sleep(1)
 print('You explore the island.')
@@ -347,13 +349,13 @@ time.sleep(2)
 print('\n')
 print('You have determined the three main parts of the island\nThe Jungle, The Castle Rock, and the Mountain.')
 print('** Objective Nine Completed **')
-input('Press enter to continue...')
+raw_input('Press enter to continue...')
 print("==========================")
 print('You return back to Piggy at the camp.\nHe is startled by your arrival, what do you do?')
 time.sleep(1)
-obj8 =input('a.) Ask Piggy what happened.\nb.) Order others to gather firewood, and start a fire.\nc.) Attempt to eliminate Jack, your competition.\n').lower()
+obj8 =raw_input('a.) Ask Piggy what happened.\nb.) Order others to gather firewood, and start a fire.\nc.) Attempt to eliminate Jack, your competition.\n').lower()
 while obj8 not in ('a','b','c'):
-    obj8 =input('Invalid. Please Enter Again:').lower()
+    obj8 =raw_input('Invalid. Please Enter Again:').lower()
 if obj8 =='a':
     print('You proceed to ask piggy.')
 elif obj8 == 'b':
@@ -372,13 +374,13 @@ elif obj8 == 'c':
         seconds = "0." + str(randrange(1, 2, 1))
         seconds = float(seconds)
         time.sleep(seconds)
-    input('Press enter to continue...')
+    raw_input('Press enter to continue...')
     print("==========================")
     sys.exit()
 time.sleep(2)
-obj9 =input('Do you ask\na.) Where did the kids go?\nb.) How many kids where here?\n')
+obj9 =raw_input('Do you ask\na.) Where did the kids go?\nb.) How many kids where here?\n')
 while obj9 not in ('a', 'b'):
-    obj9 =input('Invalid. Please Enter Again:').lower()
+    obj9 =raw_input('Invalid. Please Enter Again:').lower()
 if obj9 == 'a':
     print('Piggy: As soon as you left, the kids ran off, so I could not count how many there were.')
 if obj9 == 'b':
@@ -387,7 +389,7 @@ time.sleep(1)
 print('Piggy: However, I did get a few. There was Robert, and Maurice, and Henry, and Simon.')
 time.sleep(1)
 print('** Objective Nine Completed **')
-input('Press enter to continue...')
+raw_input('Press enter to continue...')
 print("==========================")
 print('SamnEric emerge from the jungle carrying logs')
 print('Suddenly an aircraft comes crashing down on you')
