@@ -85,8 +85,10 @@ if obj1 == 'a':
             break
         else:
             print("Ahhhj Make it shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
-    if name == ('kelly'):
+    if name ==('Kelly'):
         print('Heyy Bffl.')
+    if name == ('Sarah'):
+        print('AHHHHHHHJ, sorry I needed to say that. Continue :)')
     time.sleep(1)
     print('Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
     time.sleep(1)
@@ -152,8 +154,10 @@ elif obj1 == 'b':
             break
         else:
             print("Ahhhj Make it shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
-    if name == ('kelly'):
-        print('Hey Bffl.')
+    if name == ('Kelly'):
+        print('Hey Bffl, ily.')
+    if name == ('Sarah'):
+        print('AHHHHHHHJ, sorry I needed to say that. Continue :)')
     time.sleep(1)
     print('Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
     time.sleep(1)
