@@ -1,7 +1,7 @@
 ##############################################
 # A Lord of the Flies Text Adventure Game    #
 # Programming: Dawson Diaz, Jesse Doke       #
-# Writing: Nicholas Pilgrim, Raymond Sweeney #
+# Writing: Nicholas Pilgrim                  #
 # Version 1.5, Written in Python 3.3.4       #
 ##############################################
                                              #
