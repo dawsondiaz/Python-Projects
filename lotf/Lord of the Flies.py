@@ -3,7 +3,7 @@
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim                  #
 # Colorama: By Jonathan Hartley              #
-# Version 1.6, Written in Python 2.7.6       #
+# Version 1.6.1, Written in Python 2.7.6     #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -23,7 +23,7 @@ from colorama import Fore, Back, Style       #
 init()                                       #
 ##############################################
 title.title()
-text = "Your plane has crashed on a remote island.\nYou have been trying to find your way out of the jungle for the past hour.\nYou have not seen any other human being or adult since the plane crash.\nYou have no food or water."
+text = "Your plane has crashed on a remote island.\nYou have been trying to find your way out of the jungle for the past hour.\nYou have not seen any other human being since the plane crash.\nYou have no food or water."
 
 for c in text:
     sys.stdout.write(c)
@@ -86,7 +86,7 @@ if obj1 == 'a':
         else:
             print("Ahhhj Make it shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
     if name ==('Kelly'):
-        print('Heyy Bffl.')
+        print('Heyy Bffl, ilysm')
     if name == ('Sarah'):
         print('AHHHHHHHJ, sorry I needed to say that. Continue :)')
     time.sleep(1)
@@ -155,7 +155,7 @@ elif obj1 == 'b':
         else:
             print("Ahhhj Make it shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
     if name == ('Kelly'):
-        print('Hey Bffl, ily.')
+        print('Hey Bffl, ilysm.')
     if name == ('Sarah'):
         print('AHHHHHHHJ, sorry I needed to say that. Continue :)')
     time.sleep(1)
@@ -278,7 +278,7 @@ print('Jack: Who thinks {} should be chief?'.format(name))
 time.sleep(3)
 print('The rest of the boys raise their hands')
 time.sleep(1)
-print('Jack: All right then, it is settled. {} will be cheif.'.format(name))
+print('Jack: All right then, it is settled. {} will be chief.'.format(name))
 print('** Objective Seven Completed **')
 raw_input('Press enter to continue...')
 print("==========================")
@@ -403,3 +403,6 @@ time.sleep(1)
 print('The plane starts a fire, and everyone is left to starve to death on the island')
 time.sleep(1)
 print('No one is ever rescued, there are no survivors')
+time.sleep(4)
+raw_input('Press enter to continue...')
+print("==========================")
