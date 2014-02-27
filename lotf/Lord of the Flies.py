@@ -3,7 +3,7 @@
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim                  #
 # Colorama: By Jonathan Hartley              #
-# Version 1.6.1, Written in Python 2.7.6     #
+# Version 1.6.3, Written in Python 2.7.6     #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -20,23 +20,21 @@ from engine import title                     #
 from engine import island                    #
 from colorama import init                    #
 from colorama import Fore, Back, Style       #
-init()                                       #
+init(autoreset=True)                         #
 ##############################################
-title.title()
+title.title() # This will print the title defined in /engine/title.py
 text = "Your plane has crashed on a remote island.\nYou have been trying to find your way out of the jungle for the past hour.\nYou have not seen any other human being since the plane crash.\nYou have no food or water."
 
+# Slow Text Script #
 for c in text:
     sys.stdout.write(c)
     sys.stdout.flush()
     seconds = "0." + str(randrange(1, 2, 1))
     seconds = float(seconds)
     time.sleep(seconds)
+# Slow Text Script #
 
-
-# Wait one second before executing next line
-time.sleep(1)
-
-
+time.sleep(1) # Wait one second before executing next line
 
 # First Quest
 obj1 =raw_input('\nDo you \na.) Rest on the ground \nb.) Find a way out of the jungle\n').lower()
@@ -57,85 +55,31 @@ if obj1 == 'a':
         seconds = float(seconds)
         time.sleep(seconds)
     print('You wake to a strange noise, and work your way out of the jungle.') 
-    time.sleep(1)
-    
+    time.sleep(1) # Wait one second before executing next line   
 # Second Quest    
     print('You emerge out of the jungle and walk along the shoreline of a sunny beach.')
-    # PRINT BEACH #
-    beach.beach()
-    time.sleep(1)
+    beach.beach() # This will print the title defined in /engine/beach.py 
+    time.sleep(1) # Wait one second before executing next line
     print('** Objective One Completed **')
     time.sleep(2)
     # PRESS KEY #
     raw_input("Press enter to continue...")
     print("==========================")
     text = "You hear a ruffle in the bushes behind you and you turn around\nYou are approached by a fat kid\nHe identifies himself as Piggy.\n"
-
-# Script for Slow Text
     for c in text:
         sys.stdout.write(c)
         sys.stdout.flush()
         seconds = "0." + str(randrange(1, 2, 1))
         seconds = float(seconds)
         time.sleep(seconds)
-    while True:
-        name =raw_input('Piggy: What is your name?\n').strip()
-        if len(name.split()) == 1:
-            name = name.title()
-            break
-        else:
-            print("Ahhhj Make it shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
-    if name ==('Kelly'):
-        print('Heyy Bffl, ilysm')
-    if name == ('Sarah'):
-        print('AHHHHHHHJ, sorry I needed to say that. Continue :)')
-    time.sleep(1)
-    print('Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
-    time.sleep(1)
-    print('{}: responds with HAHA PIGGY!'.format(name))
-    time.sleep(1)
-    print('** Objective Two Completed **')
-    time.sleep(2)
-    # PRINT KEY #
-    raw_input('Press enter to continue...')
-    print("==========================")
-    ## NEXT OBJECTIVE #
-    print('You and Piggy walk over to the beack and begin to swim.\nYou notice his heavy breathing, what do you ask him?')
-    time.sleep(1)
-    obj2 =raw_input("a.) Why are you breathing hard?\nb.) Have you seen anyone else?\nc.) Why don't you swim\n").lower()
-    while obj2 not in ('a', 'b','c'):
-        obj2 = raw_input("Invallid. Please Enter again: ").lower()
-    if obj2 == 'a':
-        print('Piggy: Because I have asthma.')
-    elif obj2 == 'b':
-        print('Piggy: I am afriad I have not seen any other people.')
-    elif obj2 == 'c':
-        print('Piggy: Because of my asthma, and my auntie does not allow me to.')
-    print('** Objective Three Completed **')
-    time.sleep(2)
-    raw_input('Press enter to continue...')
-    print("==========================")
-    # NEXT OBJECTIVE #
-    print('You walk over to a pond with that is being emptied by a large waterfall.\nYou see a shell. What do you do with it?')
-    time.sleep(1)
-    obj3 =raw_input('a.) Pick it up\nb.) Continue to swim\n').lower()
-    while obj3 not in ('a', 'b'):
-        obj3 =raw_input("Invallid. Please Enter Again: ").lower()
-    if obj3 == 'a':
-        print('You pick up the shell.')
-    elif obj3 == 'b':
-        print('You swim for awhile and then your attention is grabbed by Piggys admiration for the shell.')
-        time.sleep(1)
-        print('You pick up the shell.')
 # Path 2 #
-
 elif obj1 == 'b':
     print('You manage to find a path out of the jungle and discover a beach.')
     beach.beach()
     time.sleep(1)
-    print('** Objective One Completed **')
-    raw_input('Press enter to continue...')
-    print('==========================')
+    print(Fore.BLUE + Style.BRIGHT +'** Objective One Completed **')
+    raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
+    print(Fore.BLUE + Style.BRIGHT +'==========================')
     time.sleep(1)
     text = "You hear a ruffle in the bushes behind and you turn around\nYou are approached by a fat kid\nHe identifies himself as Piggy.\n"
 
@@ -147,55 +91,55 @@ elif obj1 == 'b':
         seconds = float(seconds)
         time.sleep(seconds)
 
-    while True:
-        name =raw_input('Piggy: What is your name?\n').strip()
-        if len(name.split()) == 1:
-            name = name.title()
-            break
-        else:
-            print("Ahhhj Make it shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
-    if name == ('Kelly'):
-        print('Hey Bffl, ilysm.')
-    if name == ('Sarah'):
-        print('AHHHHHHHJ, sorry I needed to say that. Continue :)')
-    time.sleep(1)
-    print('Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
-    time.sleep(1)
-    print('{}: responds with HAHA, PIGGY!'.format(name))
-    time.sleep(1)
-    print('** Objective Two Completed **')
-    time.sleep(2)
-    # PRINT KEY #
-    raw_input('Press enter to continue...')
-    print("==========================")
-    ## NEXT OBJECTIVE #
-    print('You and Piggy walk over to the beack and begin to swim.\nYou notice his heavy breathing, what do you ask him?')
-    time.sleep(1)
-    obj2 =raw_input("a.) Why are you breathing hard?\nb.) Have you seen anyone else?\nc.) Why don't you swim\n").lower()
-    while obj2 not in ('a', 'b','c'):
-        obj2 = raw_input("Invallid. Please Enter again: ").lower()
-    if obj2 == 'a':
-        print('Piggy: Because I have asthma.')
-    elif obj2 == 'b':
-        print('Piggy: I am afriad I have not seen any other people.')
-    elif obj2 == 'c':
-        print('Piggy: Because of my asthma, and my auntie does not allow me to.')
-    print('** Objective Three Completed **')
-    time.sleep(2)
-    raw_input('Press enter to continue...')
-    print("==========================")
+while True:
+    name =raw_input('Piggy: What is your name?\n').strip()
+    if len(name.split()) == 1:
+        name = name.title()
+        break
+    else:
+        print(Fore.RED + Style.BRIGHT +"Ahhj. Please make your name shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
+if name == ('Kelly'):
+    print(Fore.MAGENTA + Style.BRIGHT + "Heyy Bffl, it's Dawson. ilysm <3")
+if name == ('Sarah'):
+    print('AHHHHHHHJ, sorry I needed to say that. Continue :)')
+time.sleep(1)
+print('Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
+time.sleep(1)
+print('{}: responds with HAHA, PIGGY!'.format(name))
+time.sleep(1)
+print('** Objective Two Completed **')
+time.sleep(2)
+# PRINT KEY #
+raw_input('Press enter to continue...')
+print("==========================")
+## NEXT OBJECTIVE #
+print('You and Piggy walk over to the beack and begin to swim.\nYou notice his heavy breathing, what do you ask him?')
+time.sleep(1)
+obj2 =raw_input("a.) Why are you breathing hard?\nb.) Have you seen anyone else?\nc.) Why don't you swim\n").lower()
+while obj2 not in ('a', 'b','c'):
+    obj2 = raw_input("Invallid. Please Enter again: ").lower()
+if obj2 == 'a':
+    print('Piggy: Because I have asthma.')
+elif obj2 == 'b':
+    print('Piggy: I am afriad I have not seen any other people.')
+elif obj2 == 'c':
+     print('Piggy: Because of my asthma, and my auntie does not allow me to.')
+print('** Objective Three Completed **')
+time.sleep(2)
+raw_input('Press enter to continue...')
+print("==========================")
     # NEXT OBJECTIVE #
-    print('You walk over to a pond with that is being emptied by a large waterfall.\nYou see a shell. What do you do with it?')
+print('You walk over to a pond with that is being emptied by a large waterfall.\nYou see a shell. What do you do with it?')
+time.sleep(1)
+obj3 =raw_input('a.) Pick it up\nb.) Continue to swim\n').lower()
+while obj3 not in ('a', 'b'):
+    obj3 =raw_input("Invallid. Please Enter Again: ").lower()
+if obj3 == 'a':
+    print('You pick up the shell.')
+elif obj3 == 'b':
+    print('You swim for awhile and then your attention is grabbed by Piggys admiration for the shell.')
     time.sleep(1)
-    obj3 =raw_input('a.) Pick it up\nb.) Continue to swim\n').lower()
-    while obj3 not in ('a', 'b'):
-        obj3 =raw_input("Invallid. Please Enter Again: ").lower()
-    if obj3 == 'a':
-        print('You pick up the shell.')
-    elif obj3 == 'b':
-        print('You swim for awhile and then your attention is grabbed by Piggys admiration for the shell.')
-        time.sleep(1)
-        print('You pick up the shell.')
+    print('You pick up the shell.')
 # PRINT SHELL #
 conch.conch()
 # PRINT SHELL #
