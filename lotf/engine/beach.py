@@ -1,5 +1,15 @@
+# Take care of the wonderful imports #       #
+import time                                  #
+import sys                                   #
+from random import randrange                 #
+
+from colorama import init                    #
+from colorama import Fore, Back, Style       #
+init()                                       #
+
+
 def beach():
-    print ("""
+    print (Fore.YELLOW + Style.BRIGHT + """
               ,.  _~-.,               .
            ~'`_ \/,_. \_
           / ,"_>@`,__`~.)             |           .

@@ -3,7 +3,7 @@
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim                  #
 # Colorama: By Jonathan Hartley              #
-# Version 1.6.3, Written in Python 2.7.6     #
+# Version 1.6.4, Written in Python 2.7.6     #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -13,105 +13,81 @@ from random import randrange                 #
                                              #
 # Engine Imports from Game Directory #       #
 from engine import beach                     #
-from engine import clear                     #
+from engine import text                      #
 from engine import conch                     #
 from engine import sun                       #
 from engine import title                     #
 from engine import island                    #
+from engine import clear                     #
 from colorama import init                    #
 from colorama import Fore, Back, Style       #
 init(autoreset=True)                         #
 ##############################################
 title.title() # This will print the title defined in /engine/title.py
-text = "Your plane has crashed on a remote island.\nYou have been trying to find your way out of the jungle for the past hour.\nYou have not seen any other human being since the plane crash.\nYou have no food or water."
-
-# Slow Text Script #
-for c in text:
-    sys.stdout.write(c)
-    sys.stdout.flush()
-    seconds = "0." + str(randrange(1, 2, 1))
-    seconds = float(seconds)
-    time.sleep(seconds)
-# Slow Text Script #
-
+# The following line will print using a method defined in /engine/text.py
+text.print_slow("""Your plane has crashed on a remote island.
+You have been trying to find your way out of the jungle for the past hour.
+You have not seen any other human being since the plane crash.
+You have no food or water.""")
 time.sleep(1) # Wait one second before executing next line
 
-# First Quest
-obj1 =raw_input('\nDo you \na.) Rest on the ground \nb.) Find a way out of the jungle\n').lower()
-
+# Objective 1 #
+obj1 =raw_input(Fore.CYAN + Style.BRIGHT + '\nDo you \na.) Rest on the ground \nb.) Find a way out of the jungle\n').lower()
 while obj1 not in ('a', 'b'):
-    obj1 = raw_input("Invallid. Please Enter again: ").lower()
+    obj1 = raw_input(Fore.CYAN + Style.BRIGHT + "Invallid. Please Enter again: ").lower()
 
-# Path 1 #
+# Objective 1 #
 if obj1 == 'a':
-    print('You find a comfortable spot on the ground and drift into sleep...')
+    text.print_slow('You find a comfortable spot on the ground and drift into sleep...')
     time.sleep(1)
-    text = ('Zzz.\nZzz..\nZzz...\n')
-    # Script
-    for c in text:
-        sys.stdout.write(c)
-        sys.stdout.flush()
-        seconds = "0." + str(randrange(1, 2, 1))
-        seconds = float(seconds)
-        time.sleep(seconds)
-    print('You wake to a strange noise, and work your way out of the jungle.') 
-    time.sleep(1) # Wait one second before executing next line   
-# Second Quest    
-    print('You emerge out of the jungle and walk along the shoreline of a sunny beach.')
-    beach.beach() # This will print the title defined in /engine/beach.py 
-    time.sleep(1) # Wait one second before executing next line
-    print('** Objective One Completed **')
-    time.sleep(2)
-    # PRESS KEY #
-    raw_input("Press enter to continue...")
-    print("==========================")
-    text = "You hear a ruffle in the bushes behind you and you turn around\nYou are approached by a fat kid\nHe identifies himself as Piggy.\n"
-    for c in text:
-        sys.stdout.write(c)
-        sys.stdout.flush()
-        seconds = "0." + str(randrange(1, 2, 1))
-        seconds = float(seconds)
-        time.sleep(seconds)
-# Path 2 #
+    text.print_slow('Zzz.\nZzz..\nZzz...\n')
+    text.print_slow('You wake to a strange noise, and work your way out of the jungle.') 
+    time.sleep(1) # Wait one second before executing next line       
+    text.print_slow('You emerge out of the jungle and walk along the shoreline of a sunny beach.') 
 elif obj1 == 'b':
-    print('You manage to find a path out of the jungle and discover a beach.')
-    beach.beach()
-    time.sleep(1)
-    print(Fore.BLUE + Style.BRIGHT +'** Objective One Completed **')
-    raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
-    print(Fore.BLUE + Style.BRIGHT +'==========================')
-    time.sleep(1)
-    text = "You hear a ruffle in the bushes behind and you turn around\nYou are approached by a fat kid\nHe identifies himself as Piggy.\n"
+    text.print_slow('You manage to find a path out of the jungle and discover a beach.')
 
-# Script for Slow Text
-    for c in text:
-        sys.stdout.write(c)
-        sys.stdout.flush()
-        seconds = "0." + str(randrange(1, 2, 1))
-        seconds = float(seconds)
-        time.sleep(seconds)
-
+time.sleep(2) # Wait two seconds before executing next line
+beach.beach() # This will print the image defined in /engine/beach.py
+time.sleep(1) # Wait one second before executing next line
+print(Fore.BLUE + Style.BRIGHT +'==========================')
+print(Fore.BLUE + Style.BRIGHT +'** Objective One Completed **')
+raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
+print(Fore.BLUE + Style.BRIGHT +'==========================')
+time.sleep(1)
+text.print_slow("You hear a ruffle in the bushes behind and you turn around.\nYou are approached by a fat kid.\nHe identifies himself as Piggy.\n")
 while True:
-    name =raw_input('Piggy: What is your name?\n').strip()
+    name =raw_input(Fore.MAGENTA + Style.BRIGHT +'Piggy: What is your name?\n').strip()
     if len(name.split()) == 1:
         name = name.title()
         break
     else:
         print(Fore.RED + Style.BRIGHT +"Ahhj. Please make your name shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
+# Custom Messages for people that play the game #
 if name == ('Kelly'):
-    print(Fore.MAGENTA + Style.BRIGHT + "Heyy Bffl, it's Dawson. ilysm <3")
+        clear.clear()
+        print(Fore.CYAN + Style.BRIGHT + "--------------------------------")
+        print(Fore.MAGENTA + Style.BRIGHT + "Heyy Bffl, it's Dawson. ilysm <3")
+        print(Fore.CYAN + Style.BRIGHT + "--------------------------------")
 if name == ('Sarah'):
-    print('AHHHHHHHJ, sorry I needed to say that. Continue :)')
+        print(Fore.CYAN + Style.BRIGHT + "--------------------------------")
+        print(Fore.RED + Style.BRIGHT +'AHHJ, Sarah, you are awesome. Sorry I needed to say that, continue :)')
+        print(Fore.CYAN + Style.BRIGHT + "--------------------------------")
+if name == ('Dawson'):
+        print(Fore.CYAN + Style.BRIGHT + "--------------------------------")
+        print(Fore.CYAN + Style.BRIGHT + 'You are playing your own game... how fun.')
+        print(Fore.CYAN + Style.BRIGHT + "--------------------------------")
+# Custom Messages for people that play the game #
 time.sleep(1)
-print('Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
+print(Fore.MAGENTA + Style.BRIGHT + 'Piggy: Hello, {}. Piggy is what they call me at school. Please do not tell anyone!'.format(name))
 time.sleep(1)
-print('{}: responds with HAHA, PIGGY!'.format(name))
+print(Fore.BLUE + Style.BRIGHT + '{}: responds with HAHA, PIGGY!'.format(name))
 time.sleep(1)
-print('** Objective Two Completed **')
-time.sleep(2)
-# PRINT KEY #
-raw_input('Press enter to continue...')
-print("==========================")
+print(Fore.BLUE + Style.BRIGHT +'==========================')
+print(Fore.BLUE + Style.BRIGHT +'** Objective Two Completed **')
+raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
+print(Fore.BLUE + Style.BRIGHT +'==========================')
+
 ## NEXT OBJECTIVE #
 print('You and Piggy walk over to the beack and begin to swim.\nYou notice his heavy breathing, what do you ask him?')
 time.sleep(1)
