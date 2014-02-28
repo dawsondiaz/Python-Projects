@@ -19,8 +19,8 @@ from engine import sun                       #
 from engine import title                     #
 from engine import island                    #
 from engine import clear                     #
-from colorama import init                    #
-from colorama import Fore, Back, Style       #
+from engine import init                    #
+from engine import Fore, Back, Style       #
 init(autoreset=True)                         #
 ##############################################
 title.title() # This will print the title defined in /engine/title.py
