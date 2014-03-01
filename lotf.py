@@ -3,7 +3,7 @@
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim                  #
 # Colorama: By Jonathan Hartley              #
-# Version 1.6.6, Written in Python 2.7.6     #
+# Version 1.6.6.1, Written in Python 2.7.6   #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -141,55 +141,60 @@ os.system('cls' if os.name == 'nt' else 'clear')
 time.sleep(1)
 
 # NEXT OBJECTIVE #
-text = "Piggy: Ooh! It's a conch, I remember when I had one.\nI think if you blow through the bottom sound comes out of it.\n"
-for c in text:
-    sys.stdout.write(c)
-    sys.stdout.flush()
-    seconds = "0." + str(randrange(1, 2, 1))
-    
-    seconds = float(seconds)
-    time.sleep(seconds)
-obj4= raw_input('Do you\na.) Blow through the bottom of the shell\nb.) Ask piggy to blow the shell\n').lower()
+text.print_slow_pink("Piggy: Ooh! It's a conch, I remember when I had one.\nI think if you blow through the bottom sound comes out of it.\n")
+obj4= raw_input(Fore.CYAN + Style.BRIGHT + 'Do you\na.) Blow through the bottom of the shell\nb.) Ask piggy to blow the shell\n').lower()
 while obj4 not in ('a','b'):
-    obj4 =raw_input("Invalid. Please Enter Again: ").lower()
+    obj4 =raw_input(Fore.CYAN + Style.BRIGHT + "Invalid. Please Enter Again: ").lower()
 if obj4 == 'a':
-    print('You blow through the bottom of the shell, and a loud noise comes out of it.')
+    text.print_slow('You blow through the bottom of the shell, and a loud noise comes out of it.')
 elif obj4 == 'b':
-    print('You ask piggy to blow the conch.')
+    text.print_slow('You ask piggy to blow the conch.')
     time.sleep(1)
-    print("Piggy: I can't remember?, You're going to have to blow it.")
+    text.print_slow_pink("Piggy: I can't remember?, You're going to have to blow it.")
     time.sleep(1)
-    print("You blow through the bottom of the shell, and a loud noise comes out of it.")
-print('** Objective Five Completed **')
-raw_input('Press enter to continue...')
-print("==========================")
-time.sleep(2)
-print('Within the next few moments, boys begin to emerge all around you.\nThe nearest to you appear to be twins, what do you do?')
+    text.print_slow("You blow through the bottom of the shell, and a loud noise comes out of it.")
 time.sleep(1)
-obj5 =raw_input('Do you\na.) Ask for their names\nb.) Begin to gather all of the boys\nc.) Cower into the forest.\n').lower()
+print(Fore.CYAN + Style.BRIGHT +'==========================')
+print(Fore.BLUE + Style.BRIGHT +'** Objective Five Completed **')
+raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
+print(Fore.CYAN + Style.BRIGHT +'==========================')
+time.sleep(1)
+os.system('cls' if os.name == 'nt' else 'clear')
+time.sleep(1)
+
+# NEXT OBJECTIVE # 
+text.print_slow('Within the next few moments, boys begin to emerge all around you.\nThe nearest to you appear to be twins, what do you do?\n')
+time.sleep(1)
+obj5 =raw_input(Fore.CYAN + Style.BRIGHT + 'Do you\na.) Ask for their names\nb.) Begin to gather all of the boys\nc.) Cower into the forest.\n').lower()
 while obj5 not in ('a','b','c'):
-    obj5 =raw_input("Invalid. Please Enter Again: ").lower()
+    obj5 =raw_input(Fore.CYAN + Style.BRIGHT + "Invalid. Please Enter Again: ").lower()
 if obj5 == 'a':
-    print('You ask for their names')
+    text.print_slow('You ask for their names')
     time.sleep(1)
-    print('Twins: My name is Sam, and my name is Eric')
+    text.print_slow_red('Twins: My name is Sam, and my name is Eric')
 elif obj5 == 'b':
-    print('You attempt to gather all of the boys, however, there are too many')
+    text.print_slow('You attempt to gather all of the boys, however, there are too many')
     time.sleep(1)
-    print('The two twins approach you and ask for your name, you tell them your name is {}, and then they respond by telling you their names are Sam and Eric.'.format(name))
+    text.print_slow('The two twins approach you and ask for your name.\nYou tell them your name is {}.\nThey respond by telling you their names are Sam and Eric.\n'.format(name))
     time.sleep(1)
-    print('You three hear the fait noise of that seems like marching.')
+    text.print_slow('You three hear the fait noise of that seems like marching.')
 elif obj5 == 'c':
-    print('You cower into the forest.')
+    text.print_slow('You cower into the forest...\n')
     time.sleep(1)
-    print('You get deep into the forest, however you decide to return outside because you heard a faint noise of what seems to be a large group of marching people')
+    text.print_slow('You get deeper into the forest, however you decide to return outside.\nYou hear a faint noise.\nIt seems to be a large group of marching people\n')
     time.sleep(1)
-    print('The two twins approach you and ask for your name, you tell them your name is {}, and then they respond by telling you their names are Sam and Eric.'.format(name))
+    text.print_slow('The two twins approach you and ask for your name.\nYou tell them your name is {}.\nThey respond by telling you their names are Sam and Eric.\n'.format(name))
     time.sleep(1)
-print('** Objective Six Completed **')
-raw_input('Press enter to continue...')
-print("==========================")
 time.sleep(1)
+print(Fore.CYAN + Style.BRIGHT +'==========================')
+print(Fore.BLUE + Style.BRIGHT +'** Objective Five Completed **')
+raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
+print(Fore.CYAN + Style.BRIGHT +'==========================')
+time.sleep(1)
+os.system('cls' if os.name == 'nt' else 'clear')
+time.sleep(1)
+
+# NEXT OBJECTIVE #
 print('All of a sudden, you see a large group of boys marching in your direction.\nWhen they arrive, a person in the group faints.')
 time.sleep(2)
 print('The leader of the group (distinusged by an ornament on his cloak) asks\n"Who is the man with the trumpet"')
