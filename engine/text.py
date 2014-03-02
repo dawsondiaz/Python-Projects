@@ -32,5 +32,10 @@ def print_slow_pink(str):
         sys.stdout.write(Fore.MAGENTA + Style.BRIGHT + letter)
         sys.stdout.flush()
         time.sleep(0.07)
+def print_slow_blank(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.07)
 
 
