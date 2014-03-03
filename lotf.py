@@ -3,7 +3,7 @@
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim                  #
 # Colorama: By Jonathan Hartley              #
-# Version 1.7.0, Written in Python 2.7.6     #
+# Version 1.7.1, Written in Python 2.7.6     #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -22,6 +22,7 @@ from engine import island                    #
 from engine import init                      #
 from engine import Fore, Back, Style         #
 from engine import names                     #
+from engine import license                   #
 init(autoreset=True)                         #
 ##############################################
 
@@ -30,10 +31,14 @@ title.title() # This will print the title defined in /engine/title.py
 text.print_fast("""Programming: Dawson Diaz, Jesse Doke
 Writing: Nicholas Pilgrim\n
 """)
-raw_input(Fore.GREEN + Style.BRIGHT + "Press enter to begin...") # This will require the player to press enter before printing next line
+title = raw_input(Fore.GREEN + Style.BRIGHT + "Press enter to begin or enter " + Style.BRIGHT + Fore.RED + "'l'" + Style.BRIGHT + Fore.GREEN + " to view licenses and disclaimers... ") # This will require the player to press enter before printing next line
 os.system('cls' if os.name == 'nt' else 'clear') # This will clear the window
 # INTRODUCTION #
+if title == 'l':
+    license.license()
+    raw_input(Fore.CYAN + Style.BRIGHT +'Press enter to continue...')
 
+os.system('cls' if os.name == 'nt' else 'clear') # This will clear the window
 # The following line will print using a method defined in /engine/text.py
 text.print_slow("""Your plane has crashed on a remote island.
 You have been trying to find your way out of the jungle for the past hour.
@@ -365,8 +370,37 @@ print(Fore.CYAN + Style.BRIGHT +'==========================')
 time.sleep(1)
 os.system('cls' if os.name == 'nt' else 'clear')
 time.sleep(1)
-
-print('SamnEric emerge from the jungle carrying logs')
+# Next OBJECTIVE#
+text.print_slow('Some boys emerge from the jungle.\n')
+obj10 =raw_input(Fore.CYAN + Style.BRIGHT + 'Do you say\na.) We need a sign for ships and planes to come rescue us.\nb.) What should we do?\n')
+while obj10 not in ('a', 'b'):
+    obj10 =raw_input(Fore.CYAB + Style.BRIGHT + 'Invalid. Please Enter Again:').lower()
+if obj10 == 'a':
+    text.print_slow_pink('Piggy: We need to make shelters!\n')
+    text.print_slow_red('Jack: No!\nJack: We need a large signal, like a fire up on the mountain!\n')
+if obj10 == 'b':
+    text.print_slow_pink('Piggy: We need to make shelters!\n')
+    text.print_slow_red('Jack: No, Shut up!\n')
+text.print_slow('The group re-forms and begins to climb the mountain.\nYou tell the others to gather firewood for a signal.\nYou follow by looking for something to light the fire\n')
+obj11 =raw_input(Fore.CYAN + Style.BRIGHT + "What do you try first?\na.) Use piggy's specs.\nb.) Rub two sticks\n")
+while obj11 not in ('a', 'b'):
+    obj11 =raw_input(Fore.CYAB + Style.BRIGHT + 'Invalid. Please Enter Again:').lower()
+if obj11 == 'a':
+    text.print_slow('You ask Piggy for his specs...\n')
+    text.print_slow_pink('Piggy: Why do you need my specs???\n')
+if obj11 == 'b':
+    text.print_slow('You search around for a while...\nYou finally select two sticks that you think are good for fire.\nYou proceed to rub them together.\nYou keep trying until you hear a scream from piggy.\nYou throw the sicks down to see what is going on.\n')
+text.print_slow_red('Jack: Shut up Piggy, give them to me!\n')
+text.print_slow('Jack takes Piggys specs, and starts a huge fire from gathered materials.\n')
+text.print_slow('The fire becomes quite large, and then over takes a pile of wood set aside for future fires.\nAfter a while the fire engulfs 1/4th of the forest.\n')
+text.print_slow_cyan('You have burnt 1/4th of the island.\n')
+text.print_slow_pink('Piggy: Well that was SO useless.\n')
+text.print_slow('Jack gives Piggy back his specs.\n')
+time.sleep(1)
+print(Fore.CYAN + Style.BRIGHT +'==========================')
+print(Fore.BLUE + Style.BRIGHT +'** Objective Eleven Completed **')
+raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
+print(Fore.CYAN + Style.BRIGHT +'==========================')
 time.sleep(1)
 print(Fore.CYAN + Style.BRIGHT +'==========================')
 print(Fore.BLUE + Style.BRIGHT +'** GAME STOPS HERE **')

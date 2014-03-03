@@ -3,7 +3,7 @@ import time                                  #
 import sys                                   #
 import os                                    #
 from random import randrange                 #
-import title
+import title				     #
 import text                                  #
                                              #
 from colorama import init                    #
@@ -27,7 +27,8 @@ def kelly():
  / __|/ _ \  | '_ ` _ \| | | |/ __| '_ \   | '_ \|  _|  _| |  
  \__ \ (_) | | | | | | | |_| | (__| | | |  | |_) | | | | | |_ 
  |___/\___/  |_| |_| |_|\__,_|\___|_| |_|  |_.__/|_| |_| |_(_)
-""")
+ """)
+    print(Fore.GREEN + Style.BRIGHT + "SUPER SECRET GAME WINNING SECRET: Don't try to kill Jack, or save Piggy.\nYou will die, and I don't want you to.")
     raw_input(Fore.CYAN + Style.BRIGHT + "Press enter to continue...")
     print(Fore.GREEN + Style.BRIGHT +'==========================')
     os.system('cls' if os.name == 'nt' else 'clear')
