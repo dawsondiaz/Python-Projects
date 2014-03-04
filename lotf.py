@@ -3,7 +3,7 @@
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim                  #
 # Colorama: By Jonathan Hartley              #
-# Version 1.7.1, Written in Python 2.7.6     #
+# Version 1.7.2, Written in Python 2.7.6     #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -52,10 +52,10 @@ while obj1 not in ('a', 'b'):
 
 # Objective 1 #
 if obj1 == 'a':
-    text.print_slow('You find a comfortable spot on the ground and drift into sleep...')
+    text.print_slow('You find a comfortable spot on the ground and drift into sleep...\n')
     time.sleep(1)
     text.print_slow('Zzz.\nZzz..\nZzz...\n')
-    text.print_slow('You wake to a strange noise, and work your way out of the jungle.') 
+    text.print_slow('You wake to a strange noise, and work your way out of the jungle.\n') 
     time.sleep(1) # Wait one second before executing next line       
     text.print_slow('You emerge out of the jungle and walk along the shoreline of a sunny beach.') 
 elif obj1 == 'b':
@@ -81,7 +81,7 @@ while True:
         print(Fore.RED + Style.BRIGHT +"Ahhj. Please make your name shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
 # Custom Messages for people that play the game #
 if name == ('Kelly'):
-        names.kelly()
+        names.kelly_auth()
 if name == ('Sarah'):
         names.sarah()
 if name == ('Dawson'):
@@ -374,7 +374,7 @@ time.sleep(1)
 text.print_slow('Some boys emerge from the jungle.\n')
 obj10 =raw_input(Fore.CYAN + Style.BRIGHT + 'Do you say\na.) We need a sign for ships and planes to come rescue us.\nb.) What should we do?\n')
 while obj10 not in ('a', 'b'):
-    obj10 =raw_input(Fore.CYAB + Style.BRIGHT + 'Invalid. Please Enter Again:').lower()
+    obj10 =raw_input(Fore.CYAN + Style.BRIGHT + 'Invalid. Please Enter Again:').lower()
 if obj10 == 'a':
     text.print_slow_pink('Piggy: We need to make shelters!\n')
     text.print_slow_red('Jack: No!\nJack: We need a large signal, like a fire up on the mountain!\n')
@@ -384,7 +384,7 @@ if obj10 == 'b':
 text.print_slow('The group re-forms and begins to climb the mountain.\nYou tell the others to gather firewood for a signal.\nYou follow by looking for something to light the fire\n')
 obj11 =raw_input(Fore.CYAN + Style.BRIGHT + "What do you try first?\na.) Use piggy's specs.\nb.) Rub two sticks\n")
 while obj11 not in ('a', 'b'):
-    obj11 =raw_input(Fore.CYAB + Style.BRIGHT + 'Invalid. Please Enter Again:').lower()
+    obj11 =raw_input(Fore.CYAN + Style.BRIGHT + 'Invalid. Please Enter Again:').lower()
 if obj11 == 'a':
     text.print_slow('You ask Piggy for his specs...\n')
     text.print_slow_pink('Piggy: Why do you need my specs???\n')
