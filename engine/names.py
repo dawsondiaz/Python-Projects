@@ -15,7 +15,7 @@ def kelly_auth():
     text.print_slow_red("Hey, it's Dawson...\n")
     time.sleep(2)
     auth =raw_input(Fore.CYAN + Style.BRIGHT + "Do you\na.)Like Pencils\nb.)Hate Pens\nc.)Like Pens\nd.)Like Markers\ne.)Hate Crayons\nf.)Like Sharpies\ng.)Hate Markers\n")
-    if auth == 'c':
+    if auth == 'f':
         os.system('cls' if os.name == 'nt' else 'clear')
         text.print_slow_red('Heyy it is me again...')
         time.sleep(1)
@@ -70,6 +70,8 @@ def sarah():
     print(Fore.RED + Style.BRIGHT + "...")
     time.sleep(1)
     print(Fore.RED + Style.BRIGHT + "...")
+    time.sleep(1)
+    print(Fore.RED + Style.BRIGHT + "...")
     time.sleep(4)
     os.system('cls' if os.name == 'nt' else 'clear')
     print(Fore.RED + Style.BRIGHT + """           _     _     _       
@@ -81,7 +83,34 @@ def sarah():
                      _/ |      
                     |__/       
 """)
-    print(Fore.RED + Style.BRIGHT +'AHHJ, Sarah, you are awesome, and so incredible. Sorry, I needed to say that.')
+    print(Fore.GREEN + Style.BRIGHT +'Sarah, you are awesome, incredible, amazing, and so much more\nthat I can not fit in less than two lines.')
+    time.sleep(2)
+    raw_input(Fore.CYAN + Style.BRIGHT + "Press enter to continue...")
+    print(Fore.GREEN + Style.BRIGHT +'==========================')
+    print(Fore.RED + Style.BRIGHT +'Yeah, for real... the game is broken.\nWHO BROUGHT MOON MOON?')
+    print(Fore.YELLOW + Style.BRIGHT + """ 
+                            |' \ 
+         _                  ; : ; 
+        / `-.              /: : | 
+       |  ,-.`-.          ,': : | 
+       \  :  `. `.       ,'-. : | 
+        \ ;    ;  `-.__,'    `-.| 
+         \ ;   ;  :::  ,::'`:.  `. 
+          \ `-. :  `    :.    `.  \ 
+           \   \    ,   ;   ,:    (\ 
+            \   :., :.    ,'o)): ` `-. 
+           ,/,' ;' ,::"'`.`---'   `.  `-._ 
+         ,/  :  ; '"      `;'          ,--`. 
+        ;/   :; ;             ,:'     (   ,:) 
+          ,.,:.    ; ,:.,  ,-._ `.     \""'/ 
+          '::'     `:'`  ,'(  \`._____.-'"' 
+             ;,   ;  `.  `. `._`-.  \\ 
+             ;:.  ;:       `-._`-.\  \`. 
+              '`:. :        |' `. `\  ) \ 
+                 ` ;:       |    `--\__,' 
+                   '`      ,' 
+                        ,-' """)
+    time.sleep(5)
     raw_input(Fore.CYAN + Style.BRIGHT + "Press enter to continue...")
     print(Fore.GREEN + Style.BRIGHT +'==========================')
     os.system('cls' if os.name == 'nt' else 'clear')

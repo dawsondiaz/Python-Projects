@@ -11,7 +11,7 @@ def print_slow(str):
     for letter in str:
         sys.stdout.write(Fore.GREEN + Style.BRIGHT + letter)
         sys.stdout.flush()
-        time.sleep(0.07)
+        time.sleep(0.06)
 def print_fast(str):
     for letter in str:
         sys.stdout.write(Fore.GREEN + Style.BRIGHT + letter)
@@ -21,27 +21,27 @@ def print_slow_red(str):
     for letter in str:
         sys.stdout.write(Fore.RED + Style.BRIGHT + letter)
         sys.stdout.flush()
-        time.sleep(0.07)
+        time.sleep(0.06)
 def print_slow_darkblue(str):
     for letter in str:
         sys.stdout.write(Fore.BLUE + letter)
         sys.stdout.flush()
-        time.sleep(0.07)
+        time.sleep(0.06)
 def print_slow_cyan(str):
     for letter in str:
         sys.stdout.write(Fore.CYAN + Style.BRIGHT + letter)
         sys.stdout.flush()
-        time.sleep(0.07)
+        time.sleep(0.06)
 def print_slow_pink(str):
     for letter in str:
         sys.stdout.write(Fore.MAGENTA + Style.BRIGHT + letter)
         sys.stdout.flush()
-        time.sleep(0.07)
+        time.sleep(0.06)
 def print_slow_blank(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        time.sleep(0.07)
+        time.sleep(0.06)
 def print_fast_red(str):
     for letter in str:
         sys.stdout.write(Fore.RED + Style.BRIGHT + letter)
