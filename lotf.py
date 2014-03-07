@@ -3,7 +3,7 @@
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim                  #
 # Colorama: By Jonathan Hartley              #
-# Version 1.7.2, Written in Python 2.7.6     #
+# Version 1.7.3, Written in Python 2.7.6     #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -402,9 +402,10 @@ print(Fore.BLUE + Style.BRIGHT +'** Objective Eleven Completed **')
 raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
 print(Fore.CYAN + Style.BRIGHT +'==========================')
 time.sleep(1)
+# NEXT OBJECTIVE 
 text.print_slow_pink("Piggy: We need to build shelters!\n")
 text.print_slow_red("Jack: Shut up!\n")
-text.print_slow_pink("Piggy: I have to conch!\n")
+text.print_slow_pink("Piggy: I have the conch!\n")
 conch.mini()
 text.print_slow_red("Jack: My hunters will take care of the fire...\n")
 text.print_slow("You go down to the mountain and begin to build shelters.\nYou are with Simon and Piggy while the chior boys go hunting.\n")
@@ -414,9 +415,9 @@ obj12 =raw_input(Fore.CYAN + Style.BRIGHT + "What do you do?\na.) Swim towards t
 while obj12 not in ('a', 'b'):
     obj12 =raw_input(Fore.CYAN + Style.BRIGHT + 'Invalid. Please Enter Again:').lower()
 if obj12 == 'a':
-    text.print_slow('You dive into the ocean...')
+    text.print_slow('You dive into the ocean...\n')
     time.sleep(1)
-    text.print_slow('You swim towards the boat for three and a half minutes.\nSuddenly, a huge wave forms and engulfs you.\nYou try to make it to the surface, however you black out.')
+    text.print_slow('You swim towards the boat for three and a half minutes.\nSuddenly, a huge wave forms and engulfs you.\nYou try to make it to the surface, however you black out.\n')
     time.sleep(1)
     text.print_slow('No one jumps in after you; so you end up drowning.')
     text.print_slow_red("""
@@ -427,5 +428,28 @@ GAME OVER\n
     time.sleep(1)
     sys.exit()
 if obj12 == 'b':
-    text.print_slow('k')
-time.sleep(10)
+    text.print_slow('You run up the mountain...\n')
+    text.print_slow('''When you get to the top, you see that no one is tending the fire.
+You look back at the ocean, and notice that piggy is running towards you.
+You shout for the boat to come back, but it does no good.
+You see Jack, his hunters, and SamnEric climbing the mountain.
+''')
+obj13 =raw_input(Fore.CYAN + Style.BRIGHT + "What do you do?\na.) Tell Jack he was a fool for not tending the fire.\nb.) Yell that there was a boat and that the hunt for pigs was useless.\n")
+while obj13 not in ('a', 'b'):
+    obj13 =raw_input(Fore.CYAN + Style.BRIGHT + 'Invalid. Please Enter Again:').lower()
+if obj13 == 'a':
+    text.print_slow("You tell Jack he was a fool for not tending the fire.\n")
+    text.print_slow_pink("Piggy: There was a boat!\n")
+if obj13 == 'b':
+    text.print_slow("You yell at Jack.\n")
+    text.print_slow_red("Jack: I am sorry!\n")
+text.print_slow_pink("Piggy: I'm sure the boat would've seen the smoke if there were any!\n")
+text.print_slow_red("Jack: SHUT UP!\n")
+text.print_slow("Jack reaches towards Piggy and snaps his specs from his face.\nHe breaks one lens.\n")
+print(Fore.CYAN + Style.BRIGHT +'==========================')
+print(Fore.BLUE + Style.BRIGHT +'** Objective Twelve Completed **')
+raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
+print(Fore.CYAN + Style.BRIGHT +'==========================')
+time.sleep(1)
+os.system('cls' if os.name == 'nt' else 'clear')
+time.sleep(1)

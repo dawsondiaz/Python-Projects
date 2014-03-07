@@ -1,5 +1,16 @@
+# Take care of the wonderful imports #       #
+import time                                  #
+import sys                                   #
+from random import randrange                 #
+
+from .initialise import init, deinit, reinit
+from .ansi import Fore, Back, Style
+from .ansitowin32 import AnsiToWin32         #                                       #
+##############################################
+
+
 def conch():
-    print ('''  _______ _             _____                 _     
+    print (Fore.YELLOW + Style.BRIGHT + '''  _______ _             _____                 _     
  |__   __| |           / ____|               | |    
     | |  | |__   ___  | |     ___  _ __   ___| |__  
     | |  | '_ \ / _ \ | |    / _ \| '_ \ / __| '_ \ 
@@ -16,7 +27,7 @@ def conch():
                 \|_/
 ''')
 def mini():
-	print ('''
+	print (Fore.YELLOW + Style.BRIGHT + '''
                /\'
               {.-}
              ;_.-"\'
