@@ -3,7 +3,7 @@
 # Programming: Dawson Diaz, Jesse Doke       #
 # Writing: Nicholas Pilgrim                  #
 # Colorama: By Jonathan Hartley              #
-# Version 1.7.3, Written in Python 2.7.6     #
+# Version 1.7.4, Written in Python 2.7.6     #
 ##############################################
                                              #
 # Take care of the wonderful imports #       #
@@ -446,10 +446,44 @@ if obj13 == 'b':
 text.print_slow_pink("Piggy: I'm sure the boat would've seen the smoke if there were any!\n")
 text.print_slow_red("Jack: SHUT UP!\n")
 text.print_slow("Jack reaches towards Piggy and snaps his specs from his face.\nHe breaks one lens.\n")
+time.sleep(1)
 print(Fore.CYAN + Style.BRIGHT +'==========================')
 print(Fore.BLUE + Style.BRIGHT +'** Objective Twelve Completed **')
 raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
 print(Fore.CYAN + Style.BRIGHT +'==========================')
 time.sleep(1)
 os.system('cls' if os.name == 'nt' else 'clear')
+time.sleep(1)
+# Next Objective
+text.print_slow("You climb down the mountain, you call a meeting by blowing the conch.\n")
+text.print_slow("All of the boys find their way to you and you begin the meeting...\n")
+text.print_slow("You say that everyone needs to be more organized.\nSo you try to enforce more rules.\n")
+text.print_slow_red("Jack: Rules, rules rules!!!\n")
+time.sleep(1)
+text.print_slow("You tell Jack that the rules are all they've got!\n")
+time.sleep(1)
+text.print_slow_yellow("Littlun: There's a beast! It comes out of the water!\n")
+time.sleep(1)
+text.print_slow_red("Jack: My hunters will kill the beast!\n")
+time.sleep(1)
+text.print_slow_yellow("Simon: There is no beast!\n")
+text.print_slow("The meeting has ended...\n")
+time.sleep(1)
+print(Fore.CYAN + Style.BRIGHT +'==========================')
+print(Fore.BLUE + Style.BRIGHT +'** Objective Thirteen Completed **')
+raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
+print(Fore.CYAN + Style.BRIGHT +'==========================')
+time.sleep(1)
+os.system('cls' if os.name == 'nt' else 'clear')
+time.sleep(1)
+text.print_slow("""
+All of a sudden, a plane crashes into the island.
+The plane lights a fire, and burns down all the trees.
+There is no food; and everyone starves to death.
+""")
+time.sleep(1)
+print(Fore.CYAN + Style.BRIGHT +'==========================')
+print(Fore.BLUE + Style.BRIGHT +'** GAME OVER **')
+raw_input(Fore.BLUE + Style.BRIGHT +'Press enter to continue...')
+print(Fore.CYAN + Style.BRIGHT +'==========================')
 time.sleep(1)

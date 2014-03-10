@@ -42,6 +42,11 @@ def print_slow_blank(str):
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.06)
+def print_slow_yellow(str):
+    for letter in str:
+        sys.stdout.write(Fore.YELLOW + Style.BRIGHT + letter)
+        sys.stdout.flush()
+        time.sleep(0.06)
 def print_fast_red(str):
     for letter in str:
         sys.stdout.write(Fore.RED + Style.BRIGHT + letter)
@@ -52,4 +57,3 @@ def print_fast_yellow(str):
         sys.stdout.write(Fore.YELLOW + Style.BRIGHT + letter)
         sys.stdout.flush()
         time.sleep(0.04)
-
