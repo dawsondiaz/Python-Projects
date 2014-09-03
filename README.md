@@ -6,10 +6,9 @@ A text-based game for Lord of the Flies by William Goulding. All IP of the game 
 Notes:
 - This game is written in Python 2.7.6
 - Works best when console/terminal has a background of black
-- Written by: Nicholas Pilgrim
-- Code by: Dawson Diaz, and Jesse Doke
-
-
+- Code by: Dawson Diaz
+- Past Contribtors: Jesse Doke, Nicholas Pilgrim
+- Lord of the Flies Written by: William Goulding
 
 Instructions:
 There are two methods of playing: exe version, and python console version. As of now the only way to run this game on mac is to have python 2.7.6 installed.
