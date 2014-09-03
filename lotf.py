@@ -23,19 +23,23 @@ from engine import init                      #
 from engine import Fore, Back, Style         #
 from engine import names                     #
 from engine import license                   #
+from engine import tips                      #
 init(autoreset=True)                         #
 ##############################################
 
 # INTRODUCTION #
 title.title() # This will print the title defined in /engine/title.py
-text.print_fast("""Programming: Dawson Diaz, Jesse Doke
-Writing: Nicholas Pilgrim\n
+text.print_fast("""Programming: Dawson Diaz
 """)
-title = raw_input(Fore.GREEN + Style.BRIGHT + "Press enter to begin or enter " + Style.BRIGHT + Fore.RED + "'l'" + Style.BRIGHT + Fore.GREEN + " to view licenses and disclaimers... ") # This will require the player to press enter before printing next line
+title = raw_input(Fore.GREEN + Style.BRIGHT + "Press enter to begin or enter " + Style.BRIGHT + Fore.RED + "'l'" + Style.BRIGHT + Fore.GREEN + " for licenses and disclaimers, and " + Style.BRIGHT + Fore.RED + "'?'" + Style.BRIGHT + Fore.GREEN +" for Tips\nand Frequently Asked Questions\n") # This will require the player to press enter before printing next line
+
 os.system('cls' if os.name == 'nt' else 'clear') # This will clear the window
 # INTRODUCTION #
 if title == 'l':
     license.license()
+    raw_input(Fore.CYAN + Style.BRIGHT +'Press enter to continue...')
+if title == "?":
+    tips.tips()
     raw_input(Fore.CYAN + Style.BRIGHT +'Press enter to continue...')
 
 os.system('cls' if os.name == 'nt' else 'clear') # This will clear the window
@@ -80,10 +84,8 @@ while True:
     else:
         print(Fore.RED + Style.BRIGHT +"Ahhj. Please make your name shorter or actually enter a name. If you have a name like 'Mary Joe', please seperate it by using a '-'")
 # Custom Messages for people that play the game #
-if name == ('Kelly'):
-        names.kelly_auth()
 if name == ('Sarah'):
-        names.sarah()
+        names.sarah_auth()
 if name == ('Dawson'):
         names.dawson()
 # Custom Messages for people that play the game #

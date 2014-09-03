@@ -10,46 +10,21 @@ from colorama import init                    #
 from colorama import Fore, Back, Style       #
 init()                                       #
 ##############################################
-def kelly_auth():
+def sarah_auth():
     os.system('cls' if os.name == 'nt' else 'clear')
-    text.print_slow_red("Hey, it's Dawson...\n")
+    text.print_slow_red("Heyyooo\n")
     time.sleep(2)
     auth =raw_input(Fore.CYAN + Style.BRIGHT + "Do you\na.)Like Pencils\nb.)Hate Pens\nc.)Like Pens\nd.)Like Markers\ne.)Hate Crayons\nf.)Like Sharpies\ng.)Hate Markers\n")
     if auth == 'f':
         os.system('cls' if os.name == 'nt' else 'clear')
-        text.print_slow_red('Heyy it is me again...')
         time.sleep(1)
-        kelly()
+        sarah()
     else:
-        text.print_slow('Wrong Kelly, Continue...\n')
+        text.print_slow('Wrong Sarah :(, Continue...\n')
     os.system('cls' if os.name == 'nt' else 'clear')
     print(Fore.GREEN + Style.BRIGHT + "You hear a ruffle in the bushes behind and you turn around.\nYou are approached by a fat kid.\nHe identifies himself as Piggy.")
     print(Fore.MAGENTA + Style.BRIGHT + "Piggy: What is your name?")
-    print("Kelly")
-def kelly():
-    print(Fore.MAGENTA + Style.BRIGHT + """
-  _____   _                                                   
- |_   _| | |                                                  
-   | |   | | _____   _____   _   _  ___  _   _                
-   | |   | |/ _ \ \ / / _ \ | | | |/ _ \| | | |               
-  _| |_  | | (_) \ V /  __/ | |_| | (_) | |_| |               
- |_____| |_|\___/ \_/ \___|  \__, |\___/ \__,_|               
-                              __/ |_        _      __  __ _   
-                             |___/| |      | |    / _|/ _| |  
-  ___  ___    _ __ ___  _   _  ___| |__    | |__ | |_| |_| |  
- / __|/ _ \  | '_ ` _ \| | | |/ __| '_ \   | '_ \|  _|  _| |  
- \__ \ (_) | | | | | | | |_| | (__| | | |  | |_) | | | | | |_ 
- |___/\___/  |_| |_| |_|\__,_|\___|_| |_|  |_.__/|_| |_| |_(_)
- """)
-    time.sleep(2)
-    text.print_slow("SUPER SECRET GAME WINNING SECRET: Don't try to kill Jack, or save Piggy.\nYou will die, and I don't want you to.\n")
-    text.print_slow("You're too amazing to die in this game.\n")
-    raw_input(Fore.CYAN + Style.BRIGHT + "Press enter to continue...")
-    print(Fore.GREEN + Style.BRIGHT +'==========================')
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print(Fore.GREEN + Style.BRIGHT + "You hear a ruffle in the bushes behind and you turn around.\nYou are approached by a fat kid.\nHe identifies himself as Piggy.")
-    print(Fore.MAGENTA + Style.BRIGHT + "Piggy: What is your name?")
-    print("Kelly")
+    print("Sarah")
 def sarah():
     os.system('cls' if os.name == 'nt' else 'clear')
     print(Fore.RED + Style.BRIGHT + """           _     _     _       
@@ -111,6 +86,8 @@ def sarah():
                    '`      ,' 
                         ,-' """)
     time.sleep(5)
+    text.print_slow("SUPER SECRET GAME WINNING SECRET: Don't try to kill Jack, or save Piggy.\nYou will die, and I don't want you to.\n")
+    text.print_slow("You're too amazing to die in this game.\n")
     raw_input(Fore.CYAN + Style.BRIGHT + "Press enter to continue...")
     print(Fore.GREEN + Style.BRIGHT +'==========================')
     os.system('cls' if os.name == 'nt' else 'clear')
