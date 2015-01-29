@@ -20,5 +20,5 @@ There are two methods of playing: exe version, and python console version. As of
 
 2.) Download project master (python version)
 - Extract lotf.py and engine.py (place them in the same lcoation)
-- run python.exe
+- in the terminal, change the diretory to the location of lotf.py and enhine.py then type "python"
 - execute command "import lotf"
